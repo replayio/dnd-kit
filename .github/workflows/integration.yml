@@ -8,7 +8,6 @@ on:
 
 jobs:
   cypress-record:
-    name: Cypress (record)
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -31,7 +30,6 @@ jobs:
           api-key: rwk_xotyGyB5caCwrG8wHmOyVM3Plg6HYXvfWkjuVlH4EdC
           public: true
   cypress-no-record:
-    name: Cypress (no-record)
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -48,9 +46,13 @@ jobs:
           RECORD_REPLAY_DRIVER: /tmp/not-here
           RECORD_REPLAY_TEST_METRICS: 1
           RECORD_REPLAY_WEBHOOK_URL: ${{ secrets.RECORD_REPLAY_WEBHOOK_URL }}
-      - name: Upload replays ▶️
-        if: ${{ always() }}
-        uses: replayio/action-upload@v0.4.3
+  cypress-original:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
         with:
-          api-key: rwk_xotyGyB5caCwrG8wHmOyVM3Plg6HYXvfWkjuVlH4EdC
-          public: true
+          start: npm run start:storybook
+          wait-on: 'http://localhost:6006'
+          wait-on-timeout: 120
