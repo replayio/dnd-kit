@@ -2948,19 +2948,19 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@replayio/cypress@^0.2.16":
-  version "0.2.16"
-  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.2.16.tgz#55406c147073f56eca2925430fbd5fe20a7f336f"
-  integrity sha512-VKek8XAqPosXUOr7pGXa8DvymOMM92uZ+1fpHMzYVXWK2yZ4+ZgWb1GlTWokHrN4Ye11LTHRiDIx/na3BS4IzA==
+"@replayio/cypress@^0.2.17":
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.2.17.tgz#e9abdae1e8dddbd00db341c5fa1dea3aa3410a99"
+  integrity sha512-bNcw6vCPiBKQ2MSI5cxPB90pZqdOp3x0b+loa4M3KpGBGi2SDnfahnMeBmYJT9u3shpbVjdnFS1OfYZjZn5Wew==
   dependencies:
-    "@replayio/replay" "^0.9.4"
-    "@replayio/test-utils" "^0.1.0"
+    "@replayio/replay" "^0.9.5"
+    "@replayio/test-utils" "^0.1.1"
     uuid "^8.3.2"
 
-"@replayio/replay@^0.9.4":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@replayio/replay/-/replay-0.9.4.tgz#c6bf1910c92e121fe38c41a9435c7bd45d9673a2"
-  integrity sha512-wn9uBpW46zL3Qo7HJuTnIgKxXeqoqF7Cl41UFx820uR4drZtl5J/NRg8LjF/Y5u+IldBtz4P5Z1qPfyfwEewAw==
+"@replayio/replay@^0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@replayio/replay/-/replay-0.9.5.tgz#f27d02662a1b9b17ca1b07d964a5c9b8b6bf9642"
+  integrity sha512-Xfjq+/PSXanNmnLiaYcQA6uHEeLPLR6tiB+c1btdddSYrgxDWg24kE0Bej1Rtn3sqBu2iHX7JdxzWkyFDNaRyg==
   dependencies:
     "@replayio/sourcemap-upload" "^1.0.3"
     commander "^7.2.0"
@@ -2981,12 +2981,12 @@
     node-fetch "^2.6.1"
     string.prototype.matchall "^4.0.5"
 
-"@replayio/test-utils@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@replayio/test-utils/-/test-utils-0.1.0.tgz#1fb3555bfa24b7bcf439e30a53356517d1c34937"
-  integrity sha512-+T4xHVzuTGABpnoTz0/+6yIQfjZyXgxxI5T0HKqnRgxJTF8rjLBo5vYb0N8wcyv+k2m4FGWOQBtA9YXnZ8QXhQ==
+"@replayio/test-utils@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@replayio/test-utils/-/test-utils-0.1.1.tgz#42c2ba4968f1358c3198f6bdd30ebd499d4e8b70"
+  integrity sha512-XBPPc3kMioeG+7cndLParp13M78PZ2XLn6UbGU1/+C9znH2yEAPml8cpJXi15ZSbCzZwvBEQu1dLcUmmv2dTZg==
   dependencies:
-    "@replayio/replay" "^0.9.4"
+    "@replayio/replay" "^0.9.5"
     node-fetch "^2.6.7"
     uuid "^8.3.2"
 
