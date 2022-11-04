@@ -2948,10 +2948,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@replayio/cypress@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.3.2.tgz#05fdea1da4cf273b0e10075b4b5db1ca3f7f687f"
-  integrity sha512-oco5FdwBZm3uE/g6VXhVhVcYiZeVIvuHnvQu7qaGQhzGHwYriVp2RkBSdMgrBsu9fTd+TTkLF2GgypwEOsaseA==
+"@replayio/cypress@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.3.3.tgz#2736416b0e646b0f41e95dd0ab9cc5b98a451056"
+  integrity sha512-Sp3hLUxq+DSf1LRCM1UeDGaRA8AhydV8z/WRRxzxoeae4TTUAdUvohjqhHTc/QRez7iu/tet9sXLZL+GkKc0ow==
   dependencies:
     "@replayio/replay" "^0.10.1"
     "@replayio/test-utils" "^0.2.2"
