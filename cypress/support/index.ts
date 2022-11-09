@@ -17,7 +17,7 @@
 import './commands';
 
 // // @ts-ignore
-// require('@replayio/cypress/support');
+require('@replayio/cypress/support');
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
