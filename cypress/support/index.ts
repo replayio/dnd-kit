@@ -13,11 +13,12 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import './commands';
-
-// // @ts-ignore
+// @ts-ignore
 require('@replayio/cypress/support');
 
+// Import commands.js using ES2015 syntax:
+// import './commands';
+
 // Alternatively you can use CommonJS syntax:
-// require('./commands')
+// @ts-ignore
+require('./commands');
