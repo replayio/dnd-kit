@@ -14,7 +14,7 @@
 // ***********************************************************
 
 // @ts-ignore
-require('@replayio/cypress/support');
+// require('@replayio/cypress/support');
 
 // Import commands.js using ES2015 syntax:
 // import './commands';
