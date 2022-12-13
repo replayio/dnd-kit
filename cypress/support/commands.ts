@@ -37,9 +37,8 @@ Cypress.Commands.add(
   },
   (subject) => {
     return cy
-      .wrap(subject, {log: false})
-      .wait(100)
-      // .find(`[data-cypress="draggable-handle"]`);
+      .wrap(subject)
+      .find(`[data-cypress="draggable-handle"]`);
   }
 );
 
