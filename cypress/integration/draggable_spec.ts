@@ -59,13 +59,13 @@ describe('Draggable', () => {
 
           return subject;
         })
-      // .mouseMoveBy(deltaX, deltaY)
-      // .then(([subject, {delta}]) => {
-      //   expect(delta.x).eq(deltaX);
-      //   expect(delta.y).eq(deltaY);
+        .mouseMoveBy(deltaX, deltaY)
+        .then(([subject, {delta}]) => {
+          expect(delta.x).eq(deltaX);
+          expect(delta.y).eq(deltaY);
 
-      //   return subject;
-      // })
+          return subject;
+        });
       // .mouseMoveBy(-deltaX * 2, -deltaY * 2)
       // .then(([subject, {delta}]) => {
       //   expect(delta.x).eq(-deltaX * 2);
