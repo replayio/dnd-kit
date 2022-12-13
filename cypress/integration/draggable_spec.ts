@@ -59,20 +59,20 @@ describe('Draggable', () => {
 
           return subject;
         })
-        .mouseMoveBy(deltaX, deltaY)
-        .then(([subject, {delta}]) => {
-          expect(delta.x).eq(deltaX);
-          expect(delta.y).eq(deltaY);
+      // .mouseMoveBy(deltaX, deltaY)
+      // .then(([subject, {delta}]) => {
+      //   expect(delta.x).eq(deltaX);
+      //   expect(delta.y).eq(deltaY);
 
-          return subject;
-        })
-        .mouseMoveBy(-deltaX * 2, -deltaY * 2)
-        .then(([subject, {delta}]) => {
-          expect(delta.x).eq(-deltaX * 2);
-          expect(delta.y).eq(-deltaY * 2);
+      //   return subject;
+      // })
+      // .mouseMoveBy(-deltaX * 2, -deltaY * 2)
+      // .then(([subject, {delta}]) => {
+      //   expect(delta.x).eq(-deltaX * 2);
+      //   expect(delta.y).eq(-deltaY * 2);
 
-          return subject;
-        });
+      //   return subject;
+      // });
     });
   });
 
