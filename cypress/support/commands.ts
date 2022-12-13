@@ -37,7 +37,7 @@ Cypress.Commands.add(
   },
   (subject) => {
     return cy
-      .wrap(subject, {log: false})
+      .wrap(subject, {log: true})
       .find(`[data-cypress="draggable-handle"]`);
   }
 );
@@ -48,7 +48,7 @@ Cypress.Commands.add(
     prevSubject: 'element',
   },
   (subject, x: number, y: number, options?: {delay: number}) => {
-    cy.wrap(subject, {log: false})
+    cy.wrap(subject, {log: true})
       .then((subject) => {
         const initialRect = subject.get(0).getBoundingClientRect();
         const windowScroll = getDocumentScroll();
@@ -113,7 +113,7 @@ Cypress.Commands.add('getIndexForItem', (id) => {
 });
 
 Cypress.Commands.add('visitStory', (id) => {
-  return cy.visit(`/iframe.html?id=${id}`, {log: false});
+  return cy.visit(`/iframe.html?id=${id}`, {log: true});
 });
 
 const Keys = {
@@ -133,13 +133,13 @@ Cypress.Commands.add(
       name: 'Move',
     });
 
-    cy.wrap(subject, {log: false})
-      .focus({log: false})
+    cy.wrap(subject, {log: true})
+      .focus({log: true})
       .type(Keys.Space, {
         delay: 150,
         scrollBehavior: false,
         force: true,
-        log: false,
+        log: true,
       })
       .closest('body')
       .type(arrowKey.repeat(times), {
