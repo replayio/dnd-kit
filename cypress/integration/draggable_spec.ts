@@ -32,49 +32,49 @@ describe('Draggable', () => {
     });
   });
 
-  // describe('Drag handle', () => {
-  //   it('Does nothing when clicking on the item rather than the handle', () => {
-  //     cy.visitStory('core-draggable-hooks-usedraggable--drag-handle')
-  //       .findFirstDraggableItem()
-  //       .mouseMoveBy(100, 100)
-  //       .then(([subject, {delta}]) => {
-  //         expect(delta.x).eq(0);
-  //         expect(delta.y).eq(0);
+  describe('Drag handle', () => {
+    it('Does nothing when clicking on the item rather than the handle', () => {
+      cy.visitStory('core-draggable-hooks-usedraggable--drag-handle')
+        .findFirstDraggableItem()
+        .mouseMoveBy(100, 100)
+        .then(([subject, {delta}]) => {
+          expect(delta.x).eq(0);
+          expect(delta.y).eq(0);
 
-  //         return subject;
-  //       });
-  //   });
+          return subject;
+        });
+    });
 
-  //   it('Moves when clicking on the handle', () => {
-  //     const deltaX = 100;
-  //     const deltaY = 150;
+    // it('Moves when clicking on the handle', () => {
+    //   const deltaX = 100;
+    //   const deltaY = 150;
 
-  //     cy.visitStory('core-draggable-hooks-usedraggable--drag-handle')
-  //       .findFirstDraggableItem()
-  //       .findDraggableHandle()
-  //       .mouseMoveBy(deltaX, deltaY)
-  //       .then(([subject, {delta}]) => {
-  //         expect(delta.x).eq(deltaX);
-  //         expect(delta.y).eq(deltaY);
+    //   cy.visitStory('core-draggable-hooks-usedraggable--drag-handle')
+    //     .findFirstDraggableItem()
+    //     .findDraggableHandle()
+    //     .mouseMoveBy(deltaX, deltaY)
+    //     .then(([subject, {delta}]) => {
+    //       expect(delta.x).eq(deltaX);
+    //       expect(delta.y).eq(deltaY);
 
-  //         return subject;
-  //       })
-  //       .mouseMoveBy(deltaX, deltaY)
-  //       .then(([subject, {delta}]) => {
-  //         expect(delta.x).eq(deltaX);
-  //         expect(delta.y).eq(deltaY);
+    //       return subject;
+    //     })
+    //     .mouseMoveBy(deltaX, deltaY)
+    //     .then(([subject, {delta}]) => {
+    //       expect(delta.x).eq(deltaX);
+    //       expect(delta.y).eq(deltaY);
 
-  //         return subject;
-  //       })
-  //       .mouseMoveBy(-deltaX * 2, -deltaY * 2)
-  //       .then(([subject, {delta}]) => {
-  //         expect(delta.x).eq(-deltaX * 2);
-  //         expect(delta.y).eq(-deltaY * 2);
+    //       return subject;
+    //     })
+    //     .mouseMoveBy(-deltaX * 2, -deltaY * 2)
+    //     .then(([subject, {delta}]) => {
+    //       expect(delta.x).eq(-deltaX * 2);
+    //       expect(delta.y).eq(-deltaY * 2);
 
-  //         return subject;
-  //       });
-  //   });
-  // });
+    //       return subject;
+    //     });
+    // });
+  });
 
   // describe('Horizontal', () => {
   //   it('Only moves horizontally', () => {
