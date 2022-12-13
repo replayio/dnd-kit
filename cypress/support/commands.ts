@@ -38,6 +38,7 @@ Cypress.Commands.add(
   (subject) => {
     return cy
       .wrap(subject, {log: false})
+      .wait(100)
       // .find(`[data-cypress="draggable-handle"]`);
   }
 );
