@@ -2948,13 +2948,14 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@replayio/cypress@^0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.5.4.tgz#e01fd9e98da69dc1400300bdb3770372836a1020"
-  integrity sha512-sAOUXBrtf9zqYmJOBDgfy+UHIodle5X8FyT/FctsUl7OJN5Rs88awlcqkMiQLgZaAaLsZ3KlrCFkmomcymyOaA==
+"@replayio/cypress@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.5.5.tgz#70bfee2e511a97c5c6cd89f405b989929ec2698d"
+  integrity sha512-x4O9MxcPyS/hjoGmPkKhTBlVeOKC+I2I9GrKn8aoZAaG+JH+i/xVxvIyNGdhKs0g23PgnH9YOCaa8jREQzMFdg==
   dependencies:
     "@replayio/replay" "^0.12.3"
     "@replayio/test-utils" "^0.5.2"
+    debug "^4.3.4"
     semver "^7.3.8"
     uuid "^8.3.2"
 
