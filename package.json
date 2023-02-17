@@ -18,7 +18,7 @@
     "start:playground": "yarn run build && yarn --cwd playground && yarn --cwd playground start",
     "start:storybook": "start-storybook -p 6006",
     "cypress": "cypress run",
-    "cypress:replay": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) cypress run --browser 'Replay Chromium'",
+    "cypress:replay": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) cypress run --browser replay-chromium",
     "cypress:open": "cypress open",
     "changeset": "changeset",
     "release": "changeset publish",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.0",
     "@changesets/cli": "^2.16.0",
-    "@replayio/cypress": "^0.4.3",
+    "@replayio/cypress": "^0.5.4",
     "@storybook/addon-essentials": "^6.5.5",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.5.5",

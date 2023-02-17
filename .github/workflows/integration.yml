@@ -1,5 +1,5 @@
 name: E2E Test
-on: 
+on:
   schedule:
     - cron: '0 * * * *'
   push:
@@ -25,7 +25,7 @@ jobs:
           start: npm run start:storybook
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
-          browser: 'Replay Chromium'
+          browser: replay-chromium
         env:
           RECORD_ALL_CONTENT: 1
           RECORD_REPLAY_METADATA_FILE: /tmp/replay-metadata
@@ -44,7 +44,7 @@ jobs:
       - name: Set duration in output
         if: always()
         id: end
-        run: | 
+        run: |
           echo "recordDuration=$((${{ steps.uploadStart.outputs.time }} - ${{ steps.recordStart.outputs.time }}))" >> $GITHUB_OUTPUT
           echo "uploadDuration=$((`date +%s` - ${{ steps.uploadStart.outputs.time }}))" >> $GITHUB_OUTPUT
   no-record:
@@ -57,7 +57,7 @@ jobs:
           start: npm run start:storybook
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
-          browser: 'Replay Chromium'
+          browser: replay-chromium
         env:
           RECORD_ALL_CONTENT: 1
           RECORD_REPLAY_METADATA_FILE: /tmp/replay-metadata
@@ -67,7 +67,7 @@ jobs:
   original:
     runs-on: ubuntu-18.04
     outputs:
-     duration: ${{steps.end.outputs.duration}}
+      duration: ${{steps.end.outputs.duration}}
     steps:
       - uses: actions/checkout@v2
       - name: Set test start
@@ -97,5 +97,5 @@ jobs:
       - name: Fetch API Data 📦
         uses: JamesIves/fetch-api-data-action@v2
         with:
-          endpoint: "https://telemetry.replay.io"
+          endpoint: 'https://telemetry.replay.io'
           configuration: '{ "method": "POST", "body": {"event": "Webhook", "source": "metrics", "name": "action-finished", "project": "dnd-kit", "originalDuration": "${{ needs.original.outputs.duration }}", "recordDuration": "${{ needs.record.outputs.recordDuration }}", "uploadDuration": "${{ needs.record.outputs.uploadDuration }}"} }'

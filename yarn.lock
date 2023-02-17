@@ -2948,34 +2948,36 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@replayio/cypress@^0.4.3":
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.4.3.tgz#c40df475754201b7d12b7312b005acee185f4515"
-  integrity sha512-CKgq5c4ud84L+gL48WORylusybCbuvN7Bqh2XoZEGWgTvTfbFfy943YbMrghowv1+F0nkQbDGMb3ul4iWcwyYw==
+"@replayio/cypress@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@replayio/cypress/-/cypress-0.5.4.tgz#e01fd9e98da69dc1400300bdb3770372836a1020"
+  integrity sha512-sAOUXBrtf9zqYmJOBDgfy+UHIodle5X8FyT/FctsUl7OJN5Rs88awlcqkMiQLgZaAaLsZ3KlrCFkmomcymyOaA==
   dependencies:
-    "@replayio/replay" "^0.10.6"
-    "@replayio/test-utils" "^0.3.4"
+    "@replayio/replay" "^0.12.3"
+    "@replayio/test-utils" "^0.5.2"
     semver "^7.3.8"
     uuid "^8.3.2"
 
-"@replayio/replay@^0.10.6":
-  version "0.10.6"
-  resolved "https://registry.yarnpkg.com/@replayio/replay/-/replay-0.10.6.tgz#b86596d5934f9121057c9f50b1e7ab5f66d5701a"
-  integrity sha512-U4rFSKzcG69UduV4LVPSCCnvcoF2ogXLHc0mHEUgd195puhTsZcLZPV4byXCzIUCLR+tkJNrWBPcM9Nwn5JauQ==
+"@replayio/replay@^0.12.3":
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/@replayio/replay/-/replay-0.12.3.tgz#08bc939809aa45380057a49c63fc21c62f5f1175"
+  integrity sha512-BNFyorEpZR1leuteI4rSlFXZFcWFAHTtEI6y4TJfQw4+EEbgjZu9dIZ/k26DiXWy5WHXHBloDS0uSU2NbAW+vQ==
   dependencies:
-    "@replayio/sourcemap-upload" "^1.0.5"
+    "@replayio/sourcemap-upload" "^1.0.6"
     commander "^7.2.0"
     debug "^4.3.4"
     is-uuid "^1.0.2"
     jsonata "^1.8.6"
+    node-fetch "^2.6.8"
+    p-map "^4.0.0"
     superstruct "^0.15.4"
     text-table "^0.2.0"
     ws "^7.5.0"
 
-"@replayio/sourcemap-upload@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@replayio/sourcemap-upload/-/sourcemap-upload-1.0.5.tgz#e4476409b492af9a1464ad12b9eace7def59fd4c"
-  integrity sha512-zMpI+kQKO7JljX8QrZiP06UcKomLWKMlHkrBga+tLOjTIFCeRySiksVZoIoLsfxmbxhmquNXKHlUWW20CSwZDA==
+"@replayio/sourcemap-upload@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@replayio/sourcemap-upload/-/sourcemap-upload-1.0.6.tgz#2a4580e905448242a011c93887132e635f9993ee"
+  integrity sha512-cv+hgPqJku8xpfQoYDLCELZWikay7kZ8+uxIjVCpMYj4FJOmW8Qei3Z/vuGNaxEE21DDB6I2T/GLfyBMqSvsOw==
   dependencies:
     commander "^7.2.0"
     debug "^4.3.1"
@@ -2983,13 +2985,14 @@
     node-fetch "^2.6.1"
     string.prototype.matchall "^4.0.5"
 
-"@replayio/test-utils@^0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@replayio/test-utils/-/test-utils-0.3.4.tgz#6bb78700994f61177193da8903584a9ae398f27a"
-  integrity sha512-5kkfRWZnDth/SdbvEAliD+fanrT0BG8uPzn+dqGYREr8e58GiL/bf0uOtrurIhzuQoKBSseYtmL2amdqIg27ng==
+"@replayio/test-utils@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@replayio/test-utils/-/test-utils-0.5.2.tgz#9224057b0fb5546d757f86641a7d273c221d7def"
+  integrity sha512-GGBUASOlGHh3ya8gO2FO/C8Prv+7+4Jw5pLTJZSOn0Y+EPFucp9EollsKfZg9KMiEurU+1x5RBDxGItfn/8h8A==
   dependencies:
-    "@replayio/replay" "^0.10.6"
+    "@replayio/replay" "^0.12.3"
     "@types/node-fetch" "^2.6.2"
+    debug "^4.3.4"
     node-fetch "^2.6.7"
     uuid "^8.3.2"
 
@@ -12406,6 +12409,13 @@ node-fetch@^2.5.0, node-fetch@^2.6.0, node-fetch@^2.6.1, node-fetch@^2.6.7:
   version "2.6.7"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.7.tgz"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
+  dependencies:
+    whatwg-url "^5.0.0"
+
+node-fetch@^2.6.8:
+  version "2.6.9"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.9.tgz#7c7f744b5cc6eb5fd404e0c7a9fec630a55657e6"
+  integrity sha512-DJm/CJkZkRjKKj4Zi4BsKVZh3ValV5IR5s7LVZnW+6YMh0W1BfNA8XSs6DLMGYlId5F3KnA70uu2qepcR08Qqg==
   dependencies:
     whatwg-url "^5.0.0"
 
